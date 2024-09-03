@@ -132,28 +132,54 @@ section p {
   text-decoration: underline;
 }
 
+/* Search bar */
 .search-bar {
   display: flex;
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Ajusta el ancho de la barra */
+  height: 40px; /* Ajusta la altura de la barra */
 }
 
-.search-bar input {
-  padding: 5px;
-  font-size: 16px;
-}
-
-.search-bar button {
-  padding: 6px 10px;
-  margin-left: 5px;
-  background-color: #555;
-  color: white;
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 5px 15px; /* Reduce el padding interno */
   border: none;
+  outline: none;
+  font-size: 0.9rem; /* Reduce el tamaño de la letra */
+  border-radius: 25px 0 0 25px;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #aaa;
+  font-size: 0.8rem; /* Reduce el tamaño de la letra del placeholder */
+}
+
+.search-bar .search-btn,
+.search-bar .clear-btn {
+  background-color: #008080; /* Color del botón */
+  color: white;
+  padding: 0 15px; /* Reduce el padding horizontal */
+  border: none;
+  font-size: 0.9rem; /* Reduce el tamaño de la letra */
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0 20px 20px 0;
+  height: 100%; /* Asegura que los botones tengan la misma altura que el input */
 }
 
-.search-bar button:hover {
-  background-color: #777;
+.search-bar .clear-btn {
+  background-color: #005f5f; /* Color del botón de limpiar */
+  border-radius: 0 20px 20px 0;
 }
 
+.search-bar .search-btn:hover,
+.search-bar .clear-btn:hover {
+  background-color: #006666; /* Color de hover */
+}
 /* Home styles */
 .home-section {
   display: flex;
@@ -402,4 +428,72 @@ section p {
 
 .submit-btn:hover {
   background-color: #0056b3;
+}
+
+/* Contenedor para los resultados de la búsqueda */
+.time-box {
+  background-color: #008080;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 0.5rem;
+}
+
+#search-results {
+  display: none;
+  position: absolute;
+  top: 100px; /* Ajusta la distancia desde la parte superior según la altura del navbar */
+  left:50%;
+  transform: translateX(-50%);
+  width: 60%; /* Ajusta el ancho según lo necesites */
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.city-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.city-box img {
+  width: 120px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  border-radius: 8px;
+}
+
+.city-box h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+}
+
+.city-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.visit-btn {
+  background-color: #008080;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.visit-btn:hover {
+  background-color: #005f5f;
 }

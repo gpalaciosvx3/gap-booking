@@ -1,0 +1,60 @@
+{
+  "USA": {
+      "timezone": "America/New_York",
+      "cities": [
+          {
+              "name": "New York City, USA",
+              "description": "The Big Apple, a city that never sleeps, offering a diverse cultural scene, Broadway shows, and iconic sights like Times Square.",
+              "image": "assets/images/new_york.png"
+          },
+          {
+              "name": "San Francisco",
+              "description": "Famous for its Golden Gate Bridge, Alcatraz Island, and vibrant cultural scene.",
+              "image": "assets/images/san_francisco.png"
+          }
+      ]
+  },
+  "Canada": {
+      "timezone": "America/Toronto",
+      "cities": [
+          {
+              "name": "Toronto, Canada",
+              "description": "Toronto, the capital of the province of Ontario, is a major city in Canada located along the northwestern shore of Lake Ontario.",
+              "image": "assets/images/toronto.png"
+          },
+          {
+            "name": "Ottawa, Canada",
+            "description": "Ottawa is the nation's capital and the fourth largest urban region in Canada. It includes over 1.4 million people, 66% of whom live in Ottawa and the rest in neighbouring municipalities, including Gatineau (located across the Ottawa River in Quebec).",
+            "image": "assets/images/ottawa.png"
+        }
+      ]
+  },
+  "Temple": {
+      "cities": [
+        {
+            "name": "Kyoto, Japan",
+            "description": "Kyoto's temple and shrine culture is deeply rooted in Japan's religious history, blending Buddhist and Shinto traditions. Temples, dedicated to Buddhist worship, often feature intricate architecture, serene gardens, and statues of Buddha.",
+            "image": "assets/images/kyoto_temple.png"
+        },
+        {
+            "name": "Hindu, India",
+            "description": "A Hindu temple, also known as Mandir, Devasthanam, Pura, or Koil, is a sacred place where Hindus worship and show their devotion to deities through worship, sacrifice, and prayers. It is considered the house of the god to whom it is dedicated.",
+            "image": "assets/images/hindu_temple.png"
+        }
+      ]
+  },
+  "Beach": {
+      "cities": [
+        {
+            "name": "Rio, Brazil",
+            "description": "Rio beaches are known for their stunning clear waters, sunny spots and white sands. The most famous beaches are undoubtedly Copacabana and Ipanema and you can't miss them during your Rio trip.",
+            "image": "assets/images/rio_beach.png"
+        },
+        {
+            "name": "San Andres, Colombia",
+            "description": "San Andrés Island (also known as SAI, the initials of San Andrés Island) is a Colombian island in the Caribbean Sea. It is the largest of the islands that form part of the archipelago of San Andrés, Providencia and Santa Catalina, with a total area of ​​26 km², making it the largest island in the country.",
+            "image": "assets/images/sanandres_beach.png"
+        }
+      ]
+  }
+}
