@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAP Booking</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+   <!-- Social Icons -->
+   <div class="social-icons">
+      <div class="vertical-line"></div> <!-- Línea vertical -->
+      <a href="#" class="social-icon"><img src="assets/images/x.png" alt="X"></a>
+      <a href="#" class="social-icon"><img src="assets/images/facebook.png" alt="Facebook"></a>
+      <a href="#" class="social-icon"><img src="assets/images/instagram.png" alt="Instagram"></a>
+      <a href="#" class="social-icon"><img src="assets/images/youtube.png" alt="YouTube"></a>
+  </div>
+  
+  <!-- HOME | ABOUT ME | CONTACT ME -->
+  <div id="content">
+    <section id="home"></section>
+    <section id="about"></section>
+    <section id="contact"></section>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Cargar el navbar
+    fetch('components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+      });
+
+    // Cargar todas las secciones al iniciar la página
+    fetch('components/home.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('home').innerHTML = data;
+      });
+
+    fetch('components/about.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('about').innerHTML = data;
+      });
+
+    fetch('components/contact.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('contact').innerHTML = data;
+      });
+
+    // Desplazamiento suave al hacer clic en los enlaces
+    document.addEventListener('click', function(e) {
+      if (e.target.matches('a[href^="#"]')) {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').slice(1);
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  </script>
+
+</body>
+</html>
